@@ -32,10 +32,15 @@ Output: [4, 5, 1, 2, 3]"""
 Input: [0, -1, 5, 2, 3]
 Output: 2 (-1 < 5, 2 < 3)"""
 
-print(my_list23 := [randint(0, 9) for _ in range(
-    int(input("Веведите длину списка 23 => ")))])
-res23 = 0
-for i in range(0, len(my_list23) - 1):
-    if my_list23[i] < my_list23[i + 1]:
-        res23 += 1
-print(res23)
+# print(my_list23 := [randint(0, 9) for _ in range(
+#     int(input("Веведите длину списка 23 => ")))])
+# res23 = 0
+# for i in range(0, len(my_list23) - 1):
+#     if my_list23[i] < my_list23[i + 1]:
+#         res23 += 1
+# print(res23)
+
+"""Задача №21. Напишите программу для печати всех уникальных значений в словаре.
+Input: [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {" V ":"S009 "}, {" VIII ":"S007"}]
+Output: {'S005', 'S002', 'S007', 'S001', 'S009'}"""
+
