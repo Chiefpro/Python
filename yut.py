@@ -9,30 +9,30 @@ import random
 
 """Функии текста"""
 
-# text = "eyDDDKJHtyj jet44 jkn553 333 nh52"
-# print(text.split()) # перевод текста в список
-# print(text.replace(" ", " * ")) # замена элементов
-# print(text.isalpha()) # проверка на STR
-# print(text.isdigit()) # проверка на INT
-# print(text.lower()) # все в нижний регистр
-# print(text.upper()) # все в верхний регистр
-# print(text.title()) # первые буквы слова в верхний регистр
-# print(text.capitalize()) # первая буква в строке большая
-# print(text.index("y")) # находит индекс искомого эленемта
-# print(text.index("y", 2)) # находит индекс искомого эленемта начиная с указанного индекса
-# print(text.find("y")) # находит индекс искомого эленемта, но если такого нету - то он вернет "-1"
-# print(text.rfind("y")) # находит индекс искомого эленемта начиная справа, но если такого нету - то он вернет "-1"
-# print(text.count("y")) # находит колличество таких совпадений
+text = "eyDDDKJHtyj jet44 jkn553 333 nh52"
+print(text.split()) # перевод текста в список
+print(text.replace(" ", " * ")) # замена элементов
+print(text.isalpha()) # проверка на STR
+print(text.isdigit()) # проверка на INT
+print(text.lower()) # все в нижний регистр
+print(text.upper()) # все в верхний регистр
+print(text.title()) # первые буквы слова в верхний регистр
+print(text.capitalize()) # первая буква в строке большая
+print(text.index("y")) # находит индекс искомого эленемта
+print(text.index("y", 2)) # находит индекс искомого эленемта начиная с указанного индекса
+print(text.find("y")) # находит индекс искомого эленемта, но если такого нету - то он вернет "-1"
+print(text.rfind("y")) # находит индекс искомого эленемта начиная справа, но если такого нету - то он вернет "-1"
+print(text.count("y")) # находит колличество таких совпадений
 # print(text) 
 
-"""Срезы"""
+"""---------------------------------------------------- Срезы ---------------------------------------------------------"""
 
 # print(start:finish:step)
-# print(text[12:])
-# print(text[12:-5])
-# print(text[12:-5:2])
-# print(text[::-1])
-# print(text[text.index("D"):text.index("h")])
+print(text[12:])
+print(text[12:-5])
+print(text[12:-5:2])
+print(text[::-1])
+print(text[text.index("D"):text.index("h")])
 
 """Списки"""
 print("----------------------------------------------------------------------------")

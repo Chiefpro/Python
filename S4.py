@@ -16,3 +16,31 @@ for char in input_string:
         output.append(char)
 output_string = ' '.join(output)
 print(output_string)
+
+
+# input_string = list(input_string)
+# res25 = []
+# print(input_string)
+# for i in input_string:
+#     k=0
+#     for j in range(len(input_string)):
+#         if i == input_string[j]:
+#             k +=1
+#         if k == 0:
+#             res25.append(input_string[j])
+#         else:
+#             res25.append(k)
+    
+# print(res25)
+
+"""--------------------Задача №27. Решение в группах----------------------"""
+
+import re
+Input27 = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells"
+delimiters = r"[. ]+"
+res = re.split(delimiters, Input27)
+print(res)
+print(len(res))
+
+"""--------------------Задача №27. Решение в группах----------------------"""
+
