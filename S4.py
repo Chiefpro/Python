@@ -1,3 +1,4 @@
+from random import randint
 """Задача №25. Напишите программу, которая принимает на вход строку, и отслеживает, сколько раз каждый символ
 уже встречался. Количество повторов добавляется к символам с помощью постфикса формата _n.
 Input: a a a b c a a d c d d
@@ -42,5 +43,34 @@ res = re.split(delimiters, Input27)
 print(res)
 print(len(res))
 
-"""--------------------Задача №27. Решение в группах----------------------"""
+"""--------------------Задача №29. Решение в группах----------------------"""
 
+while True:
+    n = input("Ввседи длину множества => ")
+    if n.isdigit():
+        n = int(n)
+        break
+    else:
+        print("Введено не число!!!")
+m = []
+for i in range(n):
+    m.append(randint(0,20))
+print(m)
+m_new = []
+index_m = len(m)
+
+for i in range(n):
+    if m[i] == 0:
+        index_m = i
+        break
+    else:
+        i += 1
+
+for i in range(index_m):
+    m_new.append(m[i])
+print(m_new)
+m_new = set(m_new)
+print(m_new)
+m_neww = list(m_new)
+print(m_neww)
+print(m_neww[len(m_neww)-1])
