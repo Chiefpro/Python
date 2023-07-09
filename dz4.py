@@ -10,6 +10,8 @@ from random import randint
 6 12
 """
 print("--------------------------------- Задача 22 ----------------------------------")
+
+
 while True:
     len_list_1 = input("Введите длину первого списка => ")
     len_list_2 = input("Введите длину второго списка => ")
@@ -58,3 +60,24 @@ print(list_find)
 """
 
 print("--------------------------------- Задача 24 ----------------------------------")
+
+while True:
+    bushes = input("Введите количество кустов => ")
+    if bushes.isdigit():
+        bushes = int(bushes)
+        break
+    else:
+        print("Вы ввели не число кустов!!!")
+list_bushes = []
+for i in range(bushes):
+    list_bushes.append(randint(0,20))
+print(list_bushes)
+resalt = list_bushes[0] + list_bushes[-1] + list_bushes[1]
+max_index = 0
+for i in range(len(list_bushes)):
+    temp = list_bushes[i] + list_bushes[(i-2)] + list_bushes[(i-1)]
+    if temp > resalt:
+        resalt = temp
+        max_index = i
+print(f"Индекс самых жирных кустов => {max_index}")
+print(f"{list_bushes[max_index-1]} - {list_bushes[max_index]} - {list_bushes[max_index+1]}")
