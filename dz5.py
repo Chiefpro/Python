@@ -5,22 +5,22 @@ A = 3; B = 5 -> 243 (3⁵)
 
 print("------------------------------  Задача 26. -------------------------------------")
 
-# while True:
-#     int_a = input("Введите число А => ")
-#     int_b = input("Введите число В => ")
-#     if int_a.isdigit() and int_b.isdigit():
-#         int_a = int(int_a)
-#         int_b = int(int_b)
-#         break
-#     else:
-#         print("Вы ввсели не числа!!")
+while True:
+    int_a = input("Введите число А => ")
+    int_b = input("Введите число В => ")
+    if int_a.isdigit() and int_b.isdigit():
+        int_a = int(int_a)
+        int_b = int(int_b)
+        break
+    else:
+        print("Вы ввсели не числа!!")
 
-# def exponentiate(a, b):
-#     if b == 0:
-#         return 1
-#     return a * exponentiate(a, b - 1)
+def exponentiate(a, b):
+    if b == 0:
+        return 1
+    return a * exponentiate(a, b - 1)
 
-# print(f"{int_a} в степени {int_b} = {exponentiate(int_a, int_b)}")
+print(f"{int_a} в степени {int_b} = {exponentiate(int_a, int_b)}")
 
 
 
