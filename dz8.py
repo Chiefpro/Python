@@ -1,4 +1,3 @@
-import json
 import os
 clear = lambda: os.system('cls')
 clear()
@@ -55,25 +54,29 @@ def remove_d():
     with open(PAHT, "r", encoding="UTF-8") as file:
         t = file.readlines()
     seach_d = input("Введи имя человека для удаления => ")
+    dt = True
     for i in range(len(t)):
         t_lits = t[i].strip().split(";")
         if t_lits[0] == seach_d:
             print(f"{t_lits[0]}\t{t_lits[1]}\t{t_lits[2]}")
+            dt = False
             ti = i
-    while True:
-        question = input("Точно удалить?\tДА = 1\tНЕТ = 0 \t=>\t")
-        if question.isdigit():
-            question = int(question)
-            if question == 1 or question == 0:
-                break
-        else:
-            print("Попробуйте ещё раз")
+            while True:
+                question = input("Точно удалить?\tДА = 1\tНЕТ = 0 \t=>\t")
+                if question.isdigit():
+                    question = int(question)
+                    if question == 1 or question == 0:
+                        break
+                else:
+                    print("Попробуйте ещё раз")
+            if question == 1:
+                t.pop(ti)
+                tr = "".join(t)
+                with open(PAHT, "w", encoding="UTF-8") as file:
+                   file.write(tr)
+    if dt:
+        print("Такого человека в списке нету")
     
-    if question == 1:
-        t.pop(ti)
-        tr = "".join(t)
-        with open(PAHT, "w", encoding="UTF-8") as file:
-            file.write(tr)
     print()
     input("Для продолжения нажми Enter ")
     clear()
@@ -83,25 +86,38 @@ def edit_d():
     with open(PAHT, "r", encoding="UTF-8") as file:
         t = file.readlines()
     seach_d = input("Введи имя человека для редактирования => ")
+    dt = True
     for i in range(len(t)):
         t_lits = t[i].strip().split(";")
         if t_lits[0] == seach_d:
             print(f"{t_lits[0]}\t{t_lits[1]}\t{t_lits[2]}")
+            dt = False
             ti = i
     while True:
-        question = input("Точно удалить?\tДА = 1\tНЕТ = 0 \t=>\t")
+        question = input("Что изменить?\tИмя = 1\tТелефон = 2 \tКомментарий = 3\t=>\t")
         if question.isdigit():
             question = int(question)
-            if question == 1 or question == 0:
+            if question == 1 or question == 2 or question == 3:
                 break
         else:
             print("Попробуйте ещё раз")
     
+    t_edit = t[ti]
+    t_edit = t_edit.split(";")
     if question == 1:
-        t.pop(ti)
-        tr = "".join(t)
-        with open(PAHT, "w", encoding="UTF-8") as file:
-            file.write(tr)
+        t_edit[0] = input("Введите новое имя =>\t")
+    elif question == 2:
+        t_edit[1] = input("Введите новый телефон =>\t")
+    elif question == 3:
+        t_edit[2] = input("Введите новый комментарий =>\t")
+    t_edit = ";".join(t_edit)
+    t[ti] = t_edit
+    
+    tr = "".join(t)
+    
+    with open(PAHT, "w", encoding="UTF-8") as file:
+        file.write(tr)
+    
     print()
     input("Для продолжения нажми Enter ")
     clear()
